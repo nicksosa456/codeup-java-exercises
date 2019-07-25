@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
 //        int i = 5;
@@ -52,7 +54,25 @@ public class ControlFlowExercises {
 //            }
 //        }
 
+        Scanner scanner = new Scanner(System.in);
+//        System.out.println("What number would you like to go up to?");
+//        int num = scanner.nextInt();
+//        System.out.println("Here is your table.");
 
+
+        System.out.println("Enter a numerical grade from 0 to 100.");
+        int grade = scanner.nextInt();
+        if (grade <= 59) {
+            System.out.println("You got a F.");
+        } else if (grade > 60 && grade < 66) {
+            System.out.println("You got an D.");
+        } else if (grade >= 67 && grade <= 79) {
+            System.out.println("You got a C.");
+        } else if (grade >= 80 && grade <=87) {
+            System.out.println("You got a B.");
+        } else if (grade >= 88 && grade <= 100) {
+            System.out.println("You got an A.");
+        }
 
     }
 }
