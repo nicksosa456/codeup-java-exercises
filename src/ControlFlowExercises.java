@@ -24,21 +24,35 @@ public class ControlFlowExercises {
 //            z = (int) Math.pow(z, 2);
 //        } while (z < 1000000);
 
-        for (int i = 5; i <= 15; i ++) {
-            System.out.print(i+" ");
-        }
+//        for (int i = 5; i <= 15; i ++) {
+//            System.out.print(i+" ");
+//        }
+//
+//        for (int x = 0; x < 100; x+=2) {
+//            System.out.println(x);
+//        }
+//
+//        for (int y = 100; y >= -10; y-=5) {
+//            System.out.println(y);
+//        }
+//
+//        for (int z = 2; z < 1000000; z = (int) Math.pow(z, 2)) {
+//            System.out.println(z);
+//        }
 
-        for (int x = 0; x < 100; x+=2) {
-            System.out.println(x);
-        }
+//        for (int x = 1; x < 100; x++) {
+//            if (x % 15 == 0) {
+//                System.out.println("FizzBuzz");
+//            } else if (x % 3 == 0) {
+//                System.out.println("Fizz");
+//            } else if (x % 5 == 0) {
+//                System.out.println("Buzz");
+//            } else {
+//                System.out.println(x);
+//            }
+//        }
 
-        for (int y = 100; y >= -10; y-=5) {
-            System.out.println(y);
-        }
 
-        for (int z = 2; z < 1000000; z = (int) Math.pow(z, 2)) {
-            System.out.println(z);
-        }
 
     }
 }
