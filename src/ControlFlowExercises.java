@@ -1,4 +1,3 @@
-import javax.swing.table.TableCellEditor;
 import java.util.Scanner;
 
 public class ControlFlowExercises {
@@ -21,10 +20,10 @@ public class ControlFlowExercises {
 //            y -= 5;
 //        } while (y >= -10);
 
-//        int z = 2;
+//        long z = 2;
 //        do {
 //            System.out.println(z);
-//            z = (int) Math.pow(z, 2);
+//            z *= z;
 //        } while (z < 1000000);
 
 //        for (int i = 5; i <= 15; i ++) {
@@ -39,7 +38,7 @@ public class ControlFlowExercises {
 //            System.out.println(y);
 //        }
 //
-//        for (int z = 2; z < 1000000; z = (int) Math.pow(z, 2)) {
+//        for (long z = 2; z < 1000000; z *= z) {
 //            System.out.println(z);
 //        }
 
@@ -56,24 +55,22 @@ public class ControlFlowExercises {
 //        }
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Would you like to see a table of numbers squared and cubed? [Y/N]");
-        String userInput = scanner.nextLine();
-        boolean confirmation = userInput.equals("Y");
-        if (confirmation) {
+        String answer;
+        do {
             System.out.println("What number would you like to go up to?");
             int num = scanner.nextInt();
-            System.out.println("Here is your table.%n");
+            System.out.println("Here is your table.");
+            System.out.println();
             System.out.println("number | squared | cubed");
             System.out.println("------ | ------- | -----");
             for (int a = 1; a <= num; a++) {
                 int squared = a * a;
                 int cubed = a * a * a;
-                System.out.printf("%-7d| %-8d| %-8d%n", a, squared, cubed);
+                System.out.printf("%-6d | %-8d|  %-7d%n", a, squared, cubed);
             }
-        } else {
-            System.out.println("Okay bye.");
-        }
-
+            System.out.println("Would you like to continue? [Y/N]");
+            answer = scanner.next();
+        } while (answer.equalsIgnoreCase("y"));
 //        System.out.println("Enter a numerical grade from 0 to 100.");
 //        int grade = scanner.nextInt();
 //        if (grade <= 59) {
