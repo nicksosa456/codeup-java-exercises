@@ -56,17 +56,23 @@ public class ControlFlowExercises {
 //        }
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("What number would you like to go up to?");
-        int num = scanner.nextInt();
-        System.out.println("Here is your table.%n");
-        System.out.println("number | squared | cubed");
-        System.out.println("------ | ------- | -----");
-        for (int a = 1; a <= num; a++) {
-            int squared = (int) Math.pow(a, 2);
-            int cubed = (int) Math.pow(a, 3);
-            System.out.printf("%-7d| %-8d| %-8d%n", a, squared, cubed);
+        System.out.println("Would you like to see a table of numbers squared and cubed? [Y/N]");
+        String userInput = scanner.nextLine();
+        boolean confirmation = userInput.equals("Y");
+        if (confirmation) {
+            System.out.println("What number would you like to go up to?");
+            int num = scanner.nextInt();
+            System.out.println("Here is your table.%n");
+            System.out.println("number | squared | cubed");
+            System.out.println("------ | ------- | -----");
+            for (int a = 1; a <= num; a++) {
+                int squared = a * a;
+                int cubed = a * a * a;
+                System.out.printf("%-7d| %-8d| %-8d%n", a, squared, cubed);
+            }
+        } else {
+            System.out.println("Okay bye.");
         }
-
 
 //        System.out.println("Enter a numerical grade from 0 to 100.");
 //        int grade = scanner.nextInt();
