@@ -1,39 +1,51 @@
 import java.util.Scanner;
 
 public class MethodsExercises {
-//    number 1
-    public static long addition(int a, int b) {
-        return a+b;
-    }
-    public static long subtraction(int a, int b) {
-        return a-b;
-    }
-    public static long multiply(int a, int b) {
-        return a*b;
-    }
-    public static long divide(int a, int b) {
-        return a/b;
-    }
-    public static long modulus(int a, int b) {
-        return a%b;
-    }
+    //    number 1
+//    public static long addition(int a, int b) {
+//        return a+b;
+//    }
+//    public static long subtraction(int a, int b) {
+//        return a-b;
+//    }
+//    public static long multiply(int a, int b) {
+//        return a*b;
+//    }
+//    public static long divide(int a, int b) {
+//        return a/b;
+//    }
+//    public static long modulus(int a, int b) {
+//        return a%b;
+//    }
 
 //    number 2
 //    public static int getInteger(int min, int max){
-//
+//        Scanner scanner = new Scanner(System.in);
+//        int userInput;
+//        do {
+//            System.out.println("Enter a number between "+min+" and "+max+": ");
+//            userInput = scanner.nextInt();
+//            if (userInput > max) {
+//                System.out.println("That is not between "+min+" and "+max);
+//            } else {
+//                System.out.println("You listened to the directions");
+//                break;
+//            }
+//        } while (true);
+//        return userInput;
 //    }
 
-    static long factorial(long n){
-        if (n == 1)
-            return 1;
-        else
-            return(n * factorial(n-1));
-    }
+//    static long factorial(long n){
+//        if (n == 1)
+//            return 1;
+//        else
+//            return(n * factorial(n-1));
+//    }
 
 //    number 4
-    static long rollDice(int x) {
-        return Math.round(Math.random()*x);
-    }
+//    static long rollDice(int x) {
+//        return Math.round(Math.random()*x);
+//    }
 
     public static void main (String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -46,9 +58,7 @@ public class MethodsExercises {
 //        System.out.println(modulus(50, 3));
 
 //        number 2
-//        System.out.println("Enter a number between 1 and 10: ");
-//        int userInput = scan.nextInt();
-//        userInput = getInteger(1, 10);
+//        getInteger(1, 10);
 
 //        number 3
 //        do {
@@ -66,8 +76,8 @@ public class MethodsExercises {
 //        } while (true);
 
 //        number 4
-        System.out.println("You are about to roll 2 dice. How many sides do they have?");
-        int diceSides = scan.nextInt();
-        System.out.println("You rolled "+rollDice(diceSides)+" and "+rollDice(diceSides));
+//        System.out.println("You are about to roll 2 dice. How many sides do they have?");
+//        int diceSides = scan.nextInt();
+//        System.out.println("You rolled "+rollDice(diceSides)+" and "+rollDice(diceSides));
     }
 }
