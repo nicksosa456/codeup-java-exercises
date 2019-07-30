@@ -69,9 +69,15 @@ public class MethodsExercises {
     }
 
 //    number 4
-//    static long rollDice(int x) {
-//        return Math.round(Math.random()*x);
-//    }
+    static long rollDice(int x) {
+        return Math.round(Math.random()*x);
+    }
+    public static void dice() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("You are about to roll 2 dice. How many sides do they have?");
+        int diceSides = scan.nextInt();
+        System.out.println("You rolled "+rollDice(diceSides)+" and "+rollDice(diceSides));
+    }
 
     public static void main (String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -103,8 +109,6 @@ public class MethodsExercises {
 //        } while (true);
 
 //        number 4
-//        System.out.println("You are about to roll 2 dice. How many sides do they have?");
-//        int diceSides = scan.nextInt();
-//        System.out.println("You rolled "+rollDice(diceSides)+" and "+rollDice(diceSides));
+        dice();
     }
 }
