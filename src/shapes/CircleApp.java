@@ -1,16 +1,13 @@
 package shapes;
-import util.Input;
 
-import java.util.Scanner;
+import util.Input;
 
 public class CircleApp {
     public static void main (String[] args) {
-        Scanner scanner = new Scanner(System.in);
         Input input = new Input();
-        System.out.println("What is the radius of your circle?");
-        double userRadius = input.getDouble();
-        Circle circle = new Circle(userRadius);
-        System.out.println(userRadius);
-//        System.out.printf("The area for your circle is %f. &n", circle.getArea());
+            double radius = input.getDouble("What is the radius of this circle?");
+            Circle circle = new Circle(radius);
+            System.out.printf("The area of the circle is: %f%n", circle.getArea());
+            System.out.printf("The circumference of the circle is: %f%n", circle.getCircumference());
     }
 }
