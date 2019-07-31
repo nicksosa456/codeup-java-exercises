@@ -1,8 +1,16 @@
 public class ServerNameGenerator {
-    String[] adjectives = {"brave", "huge", "grumpy", "witty", "calm", "lazy", "shy", "talented", "clever", "dead"};
-    String[] nouns = {"computer", "music", "food", "internet", "society", "energy", "student", "office", "unit", "lake"};
+    private static String[] adjectives = {"brave", "huge", "grumpy", "witty", "calm", "lazy", "shy", "talented", "clever", "dead"};
+    private static String[] nouns = {"computer", "music", "food", "internet", "society", "energy", "student", "office", "unit", "lake"};
 
-//    public int randomNum(String[]) {
-//
-//    }
+    public static int randomNum(String random[]) {
+        return (int) Math.floor(Math.random()*random.length);
+    }
+
+    public static void main (String[] args) {
+        int adjNum = randomNum(adjectives);
+        int nounNum = randomNum(nouns);
+
+        System.out.println("Here is a random server name: ");
+        System.out.printf("%s-%s", adjectives[adjNum], nouns[nounNum]);
+    }
 }

@@ -3,25 +3,22 @@ import java.util.Arrays;
 import static java.util.Arrays.copyOf;
 
 public class ArraysExercises {
-    static void addPerson(String peep[]){
-        String[] newPeep = Arrays.copyOf(peep, peep.length+1);
-        Person peach = new Person("Peach");
-        newPeep[peep.length] = peach.getName();
-        for (String person : newPeep) {
-            System.out.println(person);
-        }
+    static Person[] addPerson(Person[] group, Person newPerson){
+        Person[] newPeep = Arrays.copyOf(group, group.length+1);
+        newPeep[newPeep.length-1] = newPerson;
+        return newPeep;
     }
     public static void main (String[] args) {
 
         int[] numbers = {1, 2, 3, 4, 5};
         System.out.println(Arrays.toString(numbers));
-        Person nick = new Person("Nick");
-        Person bill = new Person("Bill");
-        Person kate = new Person("Kate");
-        String[] people = {nick.getName(), bill.getName(), kate.getName()};
-        for (String person : people) {
-            System.out.println(person);
+        Person[] people = {new Person("Nick"), new Person("Bill"), new Person("Kate")};
+        for (Person person : people) {
+            System.out.println(person.getName());
         }
-        addPerson(people);
+        Person[] newGroup = addPerson(people, new Person("Peach"));
+        for (Person person : newGroup) {
+            System.out.println(person.getName());
+        }
     }
 }
