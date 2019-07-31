@@ -1,13 +1,14 @@
 package util;
 import java.util.Scanner;
 public class Input {
-    private Scanner scanner = new Scanner(System.in);
+    private Scanner scanner;
+
+    public Input() {
+        scanner = new Scanner(System.in);
+    }
 
     public String getString() {
-        String userString;
-        System.out.println("Enter your string.");
-        userString = scanner.nextLine();
-        return userString;
+        return this.scanner.nextLine();
     }
 
     public boolean yesNo() {
@@ -29,10 +30,7 @@ public class Input {
     }
 
     public int getInt() {
-        int userInt;
-        System.out.println("Enter a valid integer.");
-        userInt = scanner.nextInt();
-        return userInt;
+        return this.scanner.nextInt();
     }
 
     public double getDouble(double min, double max) {
@@ -48,9 +46,6 @@ public class Input {
     }
 
     public double getDouble() {
-        double userDouble;
-        System.out.println("Enter a valid decimal number.");
-        userDouble = scanner.nextDouble();
-        return userDouble;
+        return this.scanner.nextDouble();
     }
 }
