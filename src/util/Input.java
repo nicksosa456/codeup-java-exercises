@@ -1,12 +1,13 @@
 package util;
-
 import java.util.Scanner;
-
 public class Input {
     private Scanner scanner = new Scanner(System.in);
 
     public String getString() {
-        return " ";
+        String userString;
+        System.out.println("Enter your string.");
+        userString = scanner.nextLine();
+        return userString;
     }
 
     public boolean yesNo() {
@@ -28,14 +29,17 @@ public class Input {
     }
 
     public int getInt() {
-        return 0;
+        int userInt;
+        System.out.println("Enter a valid integer.");
+        userInt = scanner.nextInt();
+        return userInt;
     }
 
     public double getDouble(double min, double max) {
-        int userDouble;
+        double userDouble;
         do {
             System.out.println("Enter a decimal number between "+min+" and "+max+": ");
-            userDouble = scanner.nextInt();
+            userDouble = scanner.nextDouble();
             if (userDouble > max || userDouble < min) {
                 System.out.println("That is not between "+min+" and "+max);
             } else  break;
@@ -44,6 +48,9 @@ public class Input {
     }
 
     public double getDouble() {
-        return 0;
+        double userDouble;
+        System.out.println("Enter a valid decimal number.");
+        userDouble = scanner.nextDouble();
+        return userDouble;
     }
 }
