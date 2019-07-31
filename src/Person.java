@@ -1,20 +1,13 @@
 public class Person {
-    String name;
-    private Person (String name){
-        this.name=name;
-    }
+    private String name;
 
-    public String getName(){
-       return this.name;
-    }
+    public Person (String name){ this.name=name; }
 
-    public void setName(String name){
-        this.name = name;
-    }
+    public String getName(){ return this.name; }
 
-    public void sayHello(){
-        System.out.println("Hello, "+name);
-    }
+    public void setName(String name){ this.name = name; }
+
+    public void sayHello(){ System.out.println("Hello, "+name); }
 
     public static void main (String[] args) {
         Person nick = new Person("Nick");
