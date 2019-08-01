@@ -2,8 +2,8 @@ public class ServerNameGenerator {
     private static String[] adjectives = {"brave", "huge", "grumpy", "witty", "calm", "lazy", "shy", "talented", "clever", "dead"};
     private static String[] nouns = {"computer", "music", "food", "internet", "society", "energy", "student", "office", "unit", "lake"};
 
-    public static int randomNum(String random[]) {
-        return (int) Math.floor(Math.random()*random.length);
+    public static int randomNum(String array[]) {
+        return (int) Math.floor(Math.random()*array.length);
     }
 
     public static void main (String[] args) {
