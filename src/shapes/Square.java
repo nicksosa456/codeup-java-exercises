@@ -7,14 +7,10 @@ public class Square extends Quadrilateral {
     }
 
     @Override
-    public double setLength(double length) {
-        return 0;
-    }
+    public void setLength(double length){}
 
     @Override
-    public double setWidth(double width) {
-        return 0;
-    }
+    public void setWidth(double width) {}
 
     @Override
     public double getPerimeter() {
@@ -25,6 +21,7 @@ public class Square extends Quadrilateral {
     public double getArea() {
         return length * length;
     }
+
 //    public int side;
 //    public Square (int side) {
 //        super(side, side);

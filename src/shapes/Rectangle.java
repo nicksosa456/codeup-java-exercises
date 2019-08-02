@@ -2,20 +2,13 @@ package shapes;
 
 public class Rectangle extends Quadrilateral implements Measurable {
 
-    public Rectangle(double length, double width) {
-        super(length, width);
-    }
+    public Rectangle(double length, double width) { super(length, width); }
 
     @Override
-    public double setLength(double length) {
-        return 0;
-    }
+    public void setLength(double length) {}
 
     @Override
-    public double setWidth(double width) {
-        return 0;
-    }
-
+    public void setWidth(double width) {}
 
     @Override
     public double getPerimeter() {
@@ -26,6 +19,7 @@ public class Rectangle extends Quadrilateral implements Measurable {
     public double getArea() {
         return length * width;
     }
+
 //    protected int length;
 //    protected int width;
 //
