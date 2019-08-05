@@ -9,21 +9,18 @@ public class GradesApplication {
         Input input = new Input();
         HashMap<String, Student> students = new HashMap<>();
         Student frank = new Student("Frank", new ArrayList<>());
-        Student sam = new Student("Sam", new ArrayList<>());
-        Student suzie = new Student("Suzie", new ArrayList<>());
-        Student alice = new Student("Alice", new ArrayList<>());
         frank.addGrade(90);
         frank.addGrade(79);
         frank.addGrade(87);
-
+        Student sam = new Student("Sam", new ArrayList<>());
         sam.addGrade(96);
         sam.addGrade(77);
         sam.addGrade(83);
-
+        Student suzie = new Student("Suzie", new ArrayList<>());
         suzie.addGrade(91);
         suzie.addGrade(82);
         suzie.addGrade(74);
-
+        Student alice = new Student("Alice", new ArrayList<>());
         alice.addGrade(95);
         alice.addGrade(84);
         alice.addGrade(88);
@@ -78,9 +75,7 @@ public class GradesApplication {
 //                System.out.printf("No student was found with the username \"%s\" %n", info);
 //            }
             again = input.yesNo("Do you want to see another student? [yes/no]");
-
         } while (again);
-
         System.out.println("Have a nice day.");
     }
 }
