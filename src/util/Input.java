@@ -19,7 +19,7 @@ public class Input {
     public boolean yesNo() {
 //        System.out.println("Yes or no?");
         String answer = scanner.nextLine();
-        return answer.toLowerCase().contains("yes") || answer.toLowerCase().contains("y");
+        return answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("yes");
     }
 
     public boolean yesNo(String prompt) {
