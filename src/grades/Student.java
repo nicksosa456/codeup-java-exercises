@@ -5,12 +5,12 @@ import java.util.HashMap;
 
 public class Student {
     private String studentName;
-    private ArrayList<Integer> grades = new ArrayList<>();
+    private ArrayList<Integer> grades;
     private HashMap<String, String> attendance = new HashMap<>();
 
-    public Student(String studentName, ArrayList<Integer> grades) {
+    public Student(String studentName) {
         this.studentName = studentName;
-        this.grades = grades;
+        this.grades = new ArrayList<>();
     }
 
     // returns the student's name
@@ -33,15 +33,5 @@ public class Student {
 
     public void recordAttendance(String date, String value) {
 
-    }
-
-    public static void main(String[] args) {
-        Student nick = new Student("Nick", new ArrayList<>());
-        nick.addGrade(70);
-        nick.addGrade(90);
-        nick.addGrade(86);
-        nick.addGrade(88);
-        System.out.println("nick.grades = " + nick.grades);
-        System.out.println("nick.getGradeAverage() = " + nick.getGradeAverage());
     }
 }
