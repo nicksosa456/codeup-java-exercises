@@ -41,11 +41,12 @@ public class Input {
     }
 
     public int getInt() {
-        int userInt = 0;
+        int userInt;
         try {
             userInt = Integer.valueOf(this.scanner.nextLine());
         } catch (NumberFormatException e) {
-            System.out.println("That is not a valid number.");
+            System.out.println("That is not a valid number, try again.");
+            return getInt();
         }
         return userInt;
     }
@@ -68,11 +69,12 @@ public class Input {
     }
 
     public double getDouble() {
-        double userDouble = 0;
+        double userDouble;
         try {
             userDouble = Double.valueOf(this.scanner.nextLine());
         } catch (Exception e) {
-            System.out.println("That is not a valid number.");
+            System.out.println("That is not a valid number, try again.");
+            return getDouble();
         }
         return userDouble;
     }
@@ -83,11 +85,12 @@ public class Input {
     }
 
     public long getBinary() {
-        long userBin = 0;
+        long userBin;
         try {
             userBin = Integer.valueOf(this.scanner.nextLine(), 2);
         } catch (NumberFormatException e) {
-            System.out.println("Not a valid binary number.");
+            System.out.println("Not a valid binary number, try again.");
+            return getBinary();
         }
         return userBin;
     }
@@ -98,11 +101,12 @@ public class Input {
     }
 
     public int getHex() {
-        int userHex = 0;
+        int userHex;
         try {
             userHex = Integer.valueOf(this.scanner.nextLine(), 16);
         } catch (NumberFormatException e) {
-            System.out.println("Not a valid hexidecimal");
+            System.out.println("Not a valid hexidecimal, try again.");
+            return getHex();
         }
         return userHex;
     }
